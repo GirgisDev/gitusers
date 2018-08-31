@@ -1,3 +1,25 @@
-<h1>
-  {{title}}
-</h1>
+<div class="top-bar">
+
+	<div class="top-bar-left">
+		<ul class="dropdown menu" data-dropdown-menu>
+			<a routerLink="/">
+				<img src="src/app/images/github-logo.png" alt="Github Logo" width="45px">
+				<li class="menu-text">Github Users</li>
+			</a>
+		</ul>
+	</div>
+  <!-- end of the left section of the navbar -->
+
+	<div class="top-bar-right">
+		<ul class="menu">
+			<li><a [routerLink]="['/']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+			<li><a [routerLink]="['/users']" [routerLinkActive]="['active']">Users</a></li>
+			<li><a [routerLink]="['/about']" [routerLinkActive]="['active']">About</a></li>
+		</ul>
+	</div>
+  <!-- end of the right section of the navbar -->
+
+</div>
+<!-- end of the navigation bar -->
+
+<router-outlet></router-outlet>

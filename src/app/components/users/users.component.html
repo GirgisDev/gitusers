@@ -1,0 +1,61 @@
+<main class="users">
+	<div class="row">
+
+		<div class="small-2 columns">
+			<aside>
+				<h2>Users List</h2>
+				<ul class="vertical menu">
+					<div *ngFor="let user of users">
+						<li><a #login (click)="updateUser(login.text)">{{ user.login }}</a></li>
+					</div>
+				</ul>
+				<button type="button" class="alert button" (click)="loadMore()">Load More..</button>
+			</aside>
+		</div>
+
+		<div class="small-10 columns">
+			<section class="user" *ngIf="users">
+				<h1 class="text-center">{{ detailedUser.name }}</h1>
+				<img class="thumbnail float-center" src="{{ detailedUser.avatar_url }}" alt="User Avatar" width="200px">
+				<hr>
+
+				<div class="row">
+
+					<div class="small-12 columns">
+						<span class="label alert">ID: {{ detailedUser.id }}</span>
+						<span class="label alert">Username: '{{ detailedUser.login }}'</span>
+						<span class="label alert">Followers: {{ detailedUser.followers }}</span>
+						<span class="label alert">Following: {{ detailedUser.following }}</span>
+						<span class="label alert">Created at: {{ detailedUser.created_at | date:"dd/MM/yyyy" }}</span>
+					</div>
+
+					<hr>
+
+					<div class="small-4 columns">
+						<h4>Bio</h4>
+					</div>
+					<div class="small-8 columns">
+						<p>{{ detailedUser.bio || 'This user has no Bio' }}</p>
+					</div>
+
+					<hr>
+
+					<!-- visit the user section -->
+					<div class="small-4 columns">
+						<h4>Visit The User:</h4>
+					</div>
+					<div class="small-8 columns">
+						<a href="{{ detailedUser.html_url }}" target="_blank" class="alert button">Visit {{ detailedUser.name }}</a>
+					</div>
+
+					<hr>
+
+				</div>
+
+			</section>
+			<!--end of user section-->
+		</div>
+
+	</div>
+	<!-- end of the row -->
+</main>

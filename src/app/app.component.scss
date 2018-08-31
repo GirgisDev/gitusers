@@ -1,0 +1,45 @@
+/*------------------------------------*\
+  #COLOR-VARIABLES
+\*------------------------------------*/
+
+$main-dark: #3A4750;
+$main-color: #BE3144;
+
+
+/*------------------------------------*\
+  #NAVIGATION-BAR
+\*------------------------------------*/
+
+.top-bar {
+  background: $main-dark;
+
+  ul {
+    background: none !important;
+
+    &.dropdown.menu {
+
+      li {
+        display: inline-block;
+      }
+    }
+
+    li {
+      background: $main-dark;
+
+      &.menu-text {
+        color: #FFF;
+      }
+
+      a {
+        color: #FFF;
+
+        &.active {
+          background: $main-color;
+        }
+      }
+    }
+    // end of li properties
+  }
+  // end of ul properties
+}
+// end of navigation bar properties

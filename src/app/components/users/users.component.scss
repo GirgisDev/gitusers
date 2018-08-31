@@ -1,0 +1,145 @@
+/*------------------------------------*\
+  #COLOR-VARIABLES
+\*------------------------------------*/
+
+$main-color: #BE3144;
+$light-gray: #CCC;
+$main-gray: #606060;
+
+
+/*------------------------------------*\
+  #GLOBAL-PROPERTIES
+\*------------------------------------*/
+
+.text-center {
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato', sans-serif !important;
+}
+
+
+/*------------------------------------*\
+  #MAIN-SECTION
+\*------------------------------------*/
+
+main {
+  margin-top: 40px;
+
+  aside {
+    min-height: 550px;
+    max-height: 550px;
+    border-right: 1px solid $light-gray;
+    overflow: auto;
+    overflow-x: hidden;
+
+    h2 {
+      font-size: 20px;
+      background: #FFF;
+      color: $main-gray;
+      position: fixed;
+      margin-bottom: 40px;
+      padding: 6px 20px;
+    }
+
+    ul.vertical.menu {
+      padding-top: 60px;
+
+      li {
+        margin-bottom: 20px;
+
+        a {
+          color: #Be3232;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    button {
+      background: $main-color;
+      margin-top: 20px;
+
+      &:hover {
+        background: #C62727;
+      }
+    }
+  }
+  // end of aside properties
+
+  section.user {
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: $main-gray;
+    }
+
+    span.label {
+      background: $main-color !important;
+      margin: 0 2px 20px;
+      font-size: 14px;
+    }
+
+    h4 {
+      font-size: 18px;
+      display: inline-block;
+      color: $main-gray;
+    }
+
+    p {
+      display: inline-block;
+      color: $main-gray;
+    }
+    
+    a.button {
+      background: $main-color;
+
+      &:hover {
+        background: #C62727;
+      }
+    }
+  }
+  // end of user section
+}
+// end of the main section 
+
+
+/*------------------------------------*\
+  #SCROLLBAR-RESETTING
+\*------------------------------------*/
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: $main-color;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: $main-color;
+}
